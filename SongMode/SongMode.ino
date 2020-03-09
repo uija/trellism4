@@ -470,11 +470,13 @@ void loop() {
       } else if( !seq.isRunning() && e.bit.KEY == 5 && currentActiveSequenceIndex < 0) { // Clear Sequence
         // clear sequence
         seq.clear();
+        seq.setBpm( DEFAULT_BPM);
         projectId = -1;
         saveId = 0;
         isSave = false;
         isLoad = false;
         isConfirm = false;
+        
         renderSequencer();
         currentActiveSequenceIndex = -1;
       } else if( !seq.isRunning() && e.bit.KEY == 6 && currentActiveSequenceIndex < 0) { // Insert

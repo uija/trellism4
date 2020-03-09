@@ -91,10 +91,13 @@ void Storage::loadProject( uint8_t slot, Sequencer* sequencer) {
   
   uint32_t position = DATA_OFFSET + slot * PROJECT_SIZE;
   
-  // TODO: bpm
-  position++;
-  position++;
+  uint16_t bpm = _buffer[position++];
+  bpm += _buffer[position++];
 
+  if( bpm > 0) {
+    sequencer->setBpm( bpm);
+  }
+  
   for( uint8_t i = 0; i < SEQUENCELENGTH; ++i) {
     sequencer->setPatternAt( i, _buffer[position]);
     sequencer->setLengthAt( i, _buffer[position+1], _buffer[position+2]);
@@ -110,9 +113,14 @@ void Storage::saveProject( uint8_t slot, Sequencer* sequencer) {
   // find project address
   uint32_t position = DATA_OFFSET + slot * PROJECT_SIZE;
   
-  // TODO: bpm
-  position++;
-  position++;
+  uint16_t bpm = sequencer->getBpm();
+  if( bpm < 256) {
+    _buffer[position++] = 0;
+  } else {
+    _buffer[position++] = 255;
+    bpm -= 255;
+  }
+  _buffer[position++] = bpm;
   
   for( uint8_t i = 0; i < SEQUENCELENGTH; ++i) {
     _buffer[position] = sequencer->patternAt( i);
