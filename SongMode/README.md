@@ -1,23 +1,6 @@
 # trellism4
-My Trellis Projects
 
-<style type="text/css">
-  .device {
-    background-color: #000000;
-    padding: 8px;
-  }
-  .knob {
-    width: 72px;
-    height: 72px;
-    text-align: center;
-    background-color: #222222;
-    font-size: 12px;
-    color: #000000;
-  }
-  .dark {
-    color: #ffffff;
-  }
-</style>
+
 
 <h1>Introduction</h1>
 <p>The Screens are (most of the times) devided into 3 parts</p>
@@ -37,48 +20,9 @@ My Trellis Projects
 <p>The <b>Page</b> buttons let you navigate through the pages of the sequence. Up to 8 pages apear while you fill the leading pages.</p>
 <p>The Sequencer interprets an empty step as end of the sequence. If you have 1, 2, 3 and 5 filled, only 1-3 will pay.</p>
 <p>The <b>Steps</b> that already have a pattern assigned are marked blue. Click any step (blue and grey) to go to the <a href="Pattern">Pattern-Screen</a>.</p>
-<table class="device" cellspacing="8" cellpadding="4">
-  <tr>
-    <td class="knob" style="background-color: #00FF00;">Play</td>
-    <td class="knob" style="background-color: #FFFF00;">Init first Pattern</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob" style="background-color: #4444FF;">Load</td>
-    <td class="knob" style="background-color: #44FF44;">Save</td>
-    <td class="knob" style="background-color: #FF4444;">Clear</td>
-    <td class="knob" style="background-color: #00FF00;">Insert</td>
-    <td class="knob" style="background-color: #0000FF;">Delete</td>
-  </tr>
-  <tr>
-    <td class="knob dark" style="background-color: #000088;">Available Page</td>
-    <td class="knob dark" style="background-color: #000088;">Available Page</td>
-    <td class="knob" style="background-color: #3333FF;">Active Page</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #0000FF;">Used step</td>
-    <td class="knob" style="background-color: #0000FF;">Used step</td>
-    <td class="knob" style="background-color: #0000FF;">Used step</td>
-    <td class="knob" style="background-color: #AAAAAA;">free step</td>
-    <td class="knob" style="background-color: #AAAAAA;">free step</td>
-    <td class="knob" style="background-color: #AAAAAA;">free step</td>
-    <td class="knob" style="background-color: #AAAAAA;">free step</td>
-    <td class="knob" style="background-color: #AAAAAA;">free step</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #AAAAAA;">free step</td>
-    <td class="knob" style="background-color: #AAAAAA;">free step</td>
-    <td class="knob" style="background-color: #AAAAAA;">free step</td>
-    <td class="knob" style="background-color: #AAAAAA;">free step</td>
-    <td class="knob" style="background-color: #AAAAAA;">free step</td>
-    <td class="knob" style="background-color: #AAAAAA;">free step</td>
-    <td class="knob" style="background-color: #AAAAAA;">free step</td>
-    <td class="knob" style="background-color: #AAAAAA;">free step</td>
-  </tr>
-</table>
+
+![Sequencer Screen](https://github.com/uija/trellism4/blob/master/SongMode/img/sequencer.png?raw=true)
+
 <h1 id="Pattern">Pattern Screen</h1>
 <p>On this screen you choose, what pattern is played.</p>
 <p>Pressing the <b>Play</b> button starts the sequence (if there is at least the first step assigned). It leads to the <a href="#Play">Play-Screen</a>.</p>
@@ -86,237 +30,43 @@ My Trellis Projects
 <p>Press and Hold the <b>Length</b> Button to acces the configuration for the Length of the pattern. Opens the <a href="#Length">Length Screen</a>.</p>
 <p><b>Back</b> leads back to the <a href="#Sequence">Sequence-Screen</a>.</p>
 <p>With the <b>Bank</b> and <b>Pattern</b> buttons you choose the pattern to play. The last used Pattern length is used. Leads back to the <a href="#Sequence">Sequence Screen</a>.</p>
-<table class="device" cellspacing="8" cellpadding="4">
-  <tr>
-    <td class="knob" style="background-color: #00FF00;">Play</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob" style="background-color: #FFFFFF;">Clear</td>
-    <td class="knob" style="background-color: #FF8000;">Length</td>
-    <td class="knob" style="background-color: #FF0000;">Back</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #FF0000;">Bank A</td>
-    <td class="knob" style="background-color: #FF8888;">Bank B (Active)</td>
-    <td class="knob" style="background-color: #FF0000;">Bank C</td>
-    <td class="knob" style="background-color: #FF0000;">Bank D</td>
-    <td class="knob" style="background-color: #FF0000;">Bank E</td>
-    <td class="knob" style="background-color: #FF0000;">Bank F</td>
-    <td class="knob" style="background-color: #FF0000;">Bank G</td>
-    <td class="knob" style="background-color: #FF0000;">Bank H</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #0000FF;">Pattern 01</td>
-    <td class="knob" style="background-color: #0000FF;">Pattern 02</td>
-    <td class="knob" style="background-color: #FFFFFF;">Pattern 03 (Selected)</td>
-    <td class="knob" style="background-color: #0000FF;">Pattern 04</td>
-    <td class="knob" style="background-color: #0000FF;">Pattern 05</td>
-    <td class="knob" style="background-color: #0000FF;">Pattern 06</td>
-    <td class="knob" style="background-color: #0000FF;">Pattern 07</td>
-    <td class="knob" style="background-color: #0000FF;">Pattern 08</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #0000FF;">Pattern 09</td>
-    <td class="knob" style="background-color: #0000FF;">Pattern 10</td>
-    <td class="knob" style="background-color: #0000FF;">Pattern 11</td>
-    <td class="knob" style="background-color: #0000FF;">Pattern 12</td>
-    <td class="knob" style="background-color: #0000FF;">Pattern 13</td>
-    <td class="knob" style="background-color: #0000FF;">Pattern 14</td>
-    <td class="knob" style="background-color: #0000FF;">Pattern 15</td>
-    <td class="knob" style="background-color: #0000FF;">Pattern 16</td>
-  </tr>
-</table>
+
+![Pattern Screen](https://github.com/uija/trellism4/blob/master/SongMode/img/step.png?raw=true)
+
+
 <h1 id="Length">Length Screen</h1>
 <p>While holding the <b>Length</b> you can choose what length the pattern should have.</p>
 <p>Every button is 1/4 of a bar. In the Example, it is set to 8/4 that is 2 bars.</p>
 <p>Releasing the <b>Length</b> button will lead back to the <a href="#Pattern">Pattern Screen</a>.</p>
-<table class="device" cellspacing="8" cellpadding="4">
-  <tr>
-    <td class="knob" style="background-color: #00FF00;">Play</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob" style="background-color: #FFFFFF;">Clear</td>
-    <td class="knob" style="background-color: #FF8000;">Length</td>
-    <td class="knob" style="background-color: #FF0000;">Back</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #FF8000;">&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-    <td class="knob" style="background-color: #888888;">&nbsp;</td>
-  </tr>
-</table>
+
+![Length Screen](https://github.com/uija/trellism4/blob/master/SongMode/img/length.png?raw=true)
+
 <h1 id="Play">Play Screen</h1>
 <p>This is visible, when the song is played.</p>
 <p>The Playbutton turns red and is now a <b>Stop</b> button. Pressing it will lead back to <a href="#Sequence">Sequence screen</a>.</p>
 <p>You cannot anything here but on stop</p>
 <p>The currently active Page is highlighted, as well as the currently played step.</p>
 <p>Empty pages and steps are not emitting any light.</p>
-<table class="device" cellspacing="8" cellpadding="4">
-  <tr>
-    <td class="knob" style="background-color: #FF0000;">Stop</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #FFCCFF;">Page</td>
-    <td class="knob" style="background-color: #FFCCFF;">Page</td>
-    <td class="knob" style="background-color: #FF00FF;">Active Page</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #888888;">Step</td>
-    <td class="knob" style="background-color: #888888;">Step</td>
-    <td class="knob" style="background-color: #888888;">Step</td>
-    <td class="knob" style="background-color: #888888;">Step</td>
-    <td class="knob" style="background-color: #888888;">Step</td>
-    <td class="knob" style="background-color: #888888;">Step</td>
-    <td class="knob" style="background-color: #888888;">Step</td>
-    <td class="knob" style="background-color: #888888;">Step</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #888888;">Step</td>
-    <td class="knob" style="background-color: #888888;">Step</td>
-    <td class="knob" style="background-color: #888888;">Step</td>
-    <td class="knob" style="background-color: #00FF00;">Step (Currently playing)</td>
-    <td class="knob" style="background-color: #888888;">Step</td>
-    <td class="knob" style="background-color: #888888;">Step</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob">&nbsp;</td>
-  </tr>
-</table>
+
+![Play Screen](https://github.com/uija/trellism4/blob/master/SongMode/img/play.png?raw=true)
+
 <h1 id="Load">Load Screen</h1>
 <p>Lets you choose the project to load</p>
 <p>There are 8 pages of 16 projects. Empty slots are not eluminated. Filled slots are white,
   blue marks the currently active project slot.</p>
 <p>Loading will reset every not saved change to the currently active project!</p>
 <p>Clicking <b>Back</b> leads back to the <a href="#Sequence">Sequence Screen</a> without doing anything.</p>
-<table class="device" cellspacing="8" cellpadding="4">
-  <tr>
-    <td class="knob" style="background-color: #00FF00;">Play</td>
-    <td class="knob" style="background-color: #FFFF00;">Init first Pattern</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob" style="background-color: #4444FF;">Load</td>
-    <td class="knob" style="background-color: #44FF44;">Save</td>
-    <td class="knob" style="background-color: #FF4444;">Clear</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob" style="background-color: #FF0000;">Back</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #4444FF;">Page 1 (Active)</td>
-    <td class="knob" style="background-color: #888888;">Page 2</td>
-    <td class="knob" style="background-color: #888888;">Page 3</td>
-    <td class="knob" style="background-color: #888888;">Page 4</td>
-    <td class="knob" style="background-color: #888888;">Page 5</td>
-    <td class="knob" style="background-color: #888888;">Page 6</td>
-    <td class="knob" style="background-color: #888888;">Page 7</td>
-    <td class="knob" style="background-color: #888888;">Page 8</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #FFFFFF;">Project</td>
-    <td class="knob" style="background-color: #FFFFFF;">Project</td>
-    <td class="knob" style="background-color: #4444FF;">Project (Active)</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob" style="background-color: #FFFFFF;">Project</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob dark">Empty</td>
-  </tr>
-  <tr>
-    <td class="knob dark">Empty</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob" style="background-color: #FFFFFF;">Project</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob" style="background-color: #FFFFFF;">Project</td>
-    <td class="knob dark">Empty</td>
-  </tr>
-</table>
+
+![Load Screen](https://github.com/uija/trellism4/blob/master/SongMode/img/load.png?raw=true)
+
 <h1 id="Save">Save Screen</h1>
 <p>Lets you save your current project.</p>
 <p>Saving to an empty slot directly saves.</p>
 <p>Saving to the same slot the project was loaded from, directly saves.</p>
 <p>Saving to a slot that already contains a project, will ask for permission. (Green: okay - everywhere else: cancel)</p>
-<table class="device" cellspacing="8" cellpadding="4">
-  <tr>
-    <td class="knob" style="background-color: #00FF00;">Play</td>
-    <td class="knob" style="background-color: #FFFF00;">Init first Pattern</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob" style="background-color: #4444FF;">Load</td>
-    <td class="knob" style="background-color: #44FF44;">Save</td>
-    <td class="knob" style="background-color: #FF4444;">Clear</td>
-    <td class="knob">&nbsp;</td>
-    <td class="knob" style="background-color: #FF0000;">Back</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #44FF44;">Page 1 (Active)</td>
-    <td class="knob" style="background-color: #888888;">Page 2</td>
-    <td class="knob" style="background-color: #888888;">Page 3</td>
-    <td class="knob" style="background-color: #888888;">Page 4</td>
-    <td class="knob" style="background-color: #888888;">Page 5</td>
-    <td class="knob" style="background-color: #888888;">Page 6</td>
-    <td class="knob" style="background-color: #888888;">Page 7</td>
-    <td class="knob" style="background-color: #888888;">Page 8</td>
-  </tr>
-  <tr>
-    <td class="knob" style="background-color: #FFFFFF;">Project</td>
-    <td class="knob" style="background-color: #FFFFFF;">Project</td>
-    <td class="knob" style="background-color: #44FF44;">Project (Active)</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob" style="background-color: #FFFFFF;">Project</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob dark">Empty</td>
-  </tr>
-  <tr>
-    <td class="knob dark">Empty</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob" style="background-color: #FFFFFF;">Project</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob dark">Empty</td>
-    <td class="knob" style="background-color: #FFFFFF;">Project</td>
-    <td class="knob dark">Empty</td>
-  </tr>
-</table>
+
+![Save Screen](https://github.com/uija/trellism4/blob/master/SongMode/img/save.png?raw=true)
+
 <h1 id="Midi">MIDI Infos / Issues</h1>
 <ul>
   <li>Program-Changes need a MIDI Channel. The MIDI Channel is set to 10. I will work on a settings-page, where this can be changed.</li>
