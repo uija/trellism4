@@ -106,13 +106,45 @@ void setup() {
   }
   
   trellis.begin();
-  trellis.setBrightness( 50);
+  trellis.setBrightness( 100);
+
+  // for every column
+  for( int8_t c = -8; c < 16; ++c) {
+    // shadows
+    for( int8_t s = -3; s < 4; ++s) {
+      // row
+      for( uint8_t r = 0; r < 4; ++r) {
+        int8_t x = c + s - r;
+        if( x >= 0 && x < 8) {
+          switch( s) {
+            case 3:
+            case -3:
+              trellis.setPixelColor( r*8+x, 0x000000);
+              break;
+            case 2:
+            case -2:
+              trellis.setPixelColor( r*8+x, 0x550055);
+              break;
+            case 1:
+            case -1:
+              trellis.setPixelColor( r*8+x, 0xCC00CC);
+              break;
+            default:
+              trellis.setPixelColor( r*8+x, 0xFF00FF);
+          }
+        }
+      }
+    }
+    delay( 100);
+  }
+  
 
   storage.init();
  
   trellis.setPixelColor( 0, 0x00FF00); // Playbutton
 
   renderSequencer();
+  
   TC.startTimer(10, isr);
 }
 
