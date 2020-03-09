@@ -27,6 +27,7 @@ Sequencer::Sequencer( uint8_t midiChannel, uint16_t bpm) {
   _midiChannel = midiChannel;
   _currentStep = 0;
   _sequenceIdx = 0;
+  _lastSentPattern = 255;
   this->setBpm( bpm);
   for( uint8_t i = 0; i < SEQUENCELENGTH; ++i) {
     this->resetPatternAt( i);
@@ -42,12 +43,14 @@ bool Sequencer::tick96() {
   if( _start) {
     _start = false;
     _running = true;
+    _lastSentPattern = 255;
     this->sendMidiStart();
     
     _currentStep = &_sequence[0];
   } else if( _stop) {
     _running = false;
     _stop = false;
+    _lastSentPattern = 255;
     this->sendMidiStop();
     this->sendMidiProgramChange( _sequence[0].pattern);
   }
@@ -71,8 +74,11 @@ bool Sequencer::tick96() {
       if( _sequenceIdx >= SEQUENCELENGTH) {
         _sequenceIdx = 0;
       }
-      this->sendMidiProgramChange( _sequence[_sequenceIdx].pattern);
-      this->flushMidi();
+      if( _sequence[_sequenceIdx].pattern != _lastSentPattern) {
+        this->sendMidiProgramChange( _sequence[_sequenceIdx].pattern);
+        this->flushMidi();
+        _lastSentPattern = _sequence[_sequenceIdx].pattern;
+      }
     }
     if( _patterncount >= _currentStep->length*_currentStep->factor) {
       _patterncount = 0;

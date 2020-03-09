@@ -49,6 +49,8 @@ uint16_t _intervalcount;
 uint16_t _interval;
 uint16_t _bpm;
 
+uint8_t _lastSentPattern;
+
 Step* _currentStep;
 Step _sequence[SEQUENCELENGTH];
 
