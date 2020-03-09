@@ -1,6 +1,24 @@
 # trellism4
 My Trellis Projects
 
+<style type="text/css">
+  .device {
+    background-color: #000000;
+    padding: 8px;
+  }
+  .knob {
+    width: 72px;
+    height: 72px;
+    text-align: center;
+    background-color: #222222;
+    font-size: 12px;
+    color: #000000;
+  }
+  .dark {
+    color: #ffffff;
+  }
+</style>
+
 <h1>Introduction</h1>
 <p>The Screens are (most of the times) devided into 3 parts</p>
 <p>The first row is something like the menubar. The first button is always the play/stop button</p>
