@@ -37,7 +37,7 @@ Sequencer::Sequencer( Adafruit_NeoTrellisM4* t) {
 
 void Sequencer::setBpm( short bpm) {
     _bpm = bpm;
-    _interval = 60000 / _bpm / 24;  
+    _interval = BPMTIME / _bpm / BPMTIMEFACTOR;  
 }
 short Sequencer::getBpm() {
   return _bpm;
@@ -55,8 +55,8 @@ void Sequencer::tick() {
 void Sequencer::tick96() {
   // {0x0F, 0xFA, 0, 0} - Start
   // {0x0F, 0xF8, 0, 0} - Clock
-  //MidiUSB.sendMIDI( {0x0F, 0xF8, 0, 0});
-  //MidiUSB.flush();
+  MidiUSB.sendMIDI( {0x0F, 0xF8, 0, 0});
+  MidiUSB.flush();
   if( _progression != 0 && _tracks[0].aboutToRestart()) {
     _progression->handleQueue();
   }

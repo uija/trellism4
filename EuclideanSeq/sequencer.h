@@ -28,6 +28,8 @@
 #include "track.h"
 #include "progression.h"
 
+#define BPMTIME 6000000
+#define BPMTIMEFACTOR 24
 #define TRACKCOUNT 8
 
 class Sequencer {

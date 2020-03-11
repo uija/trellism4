@@ -127,7 +127,7 @@ void setup() {
   }
   trellis.setPixelColor( 24+activeTrack, seq.getTrack( activeTrack)->isActive() ? 0x00FF00 : 0xFF0000);
 
-  TC.startTimer(1000, isr);
+  TC.startTimer(10, isr);
 
   seq.getTrack( 0)->setRythm( new Euclidean( 16, 1, 0)); // kick
   seq.getTrack( 0)->setMelody( new FixedNote( 64));

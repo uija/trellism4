@@ -59,17 +59,6 @@
 #endif
 Adafruit_SPIFlash flash(&flashTransport);
 
-uint32_t pageColor[8] = {
-  0x0080FF,
-  0x00FF00,
-  0xFFFF00,
-  0xFF8000,
-  0x0000FF,
-  0x7F00FF,
-  0xFF00FF,
-  0xFF007F
-};
-
 Storage storage( &flash);
 
 Adafruit_NeoTrellisM4 trellis = Adafruit_NeoTrellisM4();
